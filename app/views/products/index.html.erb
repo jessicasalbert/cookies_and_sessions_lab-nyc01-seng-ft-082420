@@ -1,8 +1,13 @@
 <h1>Enter a product to add to cart</h1>
 
-<form method='post'>
-  <input name='text_field'>
-  <input type='submit' value='product'>
-</form>
+<%=form_tag '/' do %>
+    <label>Add product:</label><br>
+  <%= text_field_tag :product %><br>
+  <%= submit_tag "add to cart" %>
+<% end%>
 
-<%= cart%>
+<ul>
+<% cart.each do |item| %>
+<li><%=item%></li>
+<% end%>
+</ul>
