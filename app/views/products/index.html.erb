@@ -1,6 +1,8 @@
 <h1>Enter a product to add to cart</h1>
 
-<%= form_for '/' do |f| %>
-  <%=f.label "Enter product"%>
-  <%= f.text_field %>
-<% end %>
+<form method='post'>
+  <input name='text_field'>
+  <input type='submit' value='product'>
+</form>
+
+<%= cart%>
